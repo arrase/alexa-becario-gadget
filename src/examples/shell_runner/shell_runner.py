@@ -43,6 +43,13 @@ class ShellRunnerGadget(AlexaGadget):
     def on_custom_shellrunnergadget_tvoff(self, directive):
         os.system('/home/pi/bin/tv.sh off')
 
+    def on_custom_shellrunnergadget_reboot(self, directive):
+        os.system('reboot')
+
+    def on_custom_shellrunnergadget_upgrade(self, directive):
+        os.system('apt-get update')
+        os.system('apt-get upgrade -y')
+
 if __name__ == '__main__':
     try:
         ShellRunnerGadget().main()
