@@ -43,6 +43,9 @@ class ShellRunnerGadget(AlexaGadget):
     def on_custom_shellrunnergadget_tvoff(self, directive):
         os.system('/home/pi/bin/tv.sh off')
 
+    def on_custom_shellrunnergadget_tvas(self, directive):
+        os.system('/home/pi/bin/tv.sh as')
+
     def on_custom_shellrunnergadget_reboot(self, directive):
         os.system('reboot')
 
