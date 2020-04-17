@@ -50,8 +50,19 @@ class ShellRunnerGadget(AlexaGadget):
         os.system('reboot')
 
     def on_custom_shellrunnergadget_upgrade(self, directive):
-        os.system('apt-get update')
-        os.system('apt-get upgrade -y')
+        os.system('apt-get update && apt-get upgrade -y')
+
+    def on_custom_shellrunnergadget_torrent(self, directive):
+        os.system('/home/pi/bin/becario.sh torrent')
+
+    def on_custom_shellrunnergadget_kodi(self, directive):
+        os.system('/home/pi/bin/becario.sh kodi')
+
+    def on_custom_shellrunnergadget_pcreboot(self, directive):
+        os.system('/home/pi/bin/becario.sh pcreboot')
+
+    def on_custom_shellrunnergadget_pchalt(self, directive):
+        os.system('/home/pi/bin/becario.sh pchalt')
 
 if __name__ == '__main__':
     try:
