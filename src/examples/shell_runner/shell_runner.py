@@ -43,8 +43,20 @@ class ShellRunnerGadget(AlexaGadget):
     def on_custom_shellrunnergadget_tvoff(self, directive):
         os.system('/home/pi/bin/tv.sh off')
 
+    def on_custom_shellrunnergadget_rpias(self, directive):
+        os.system('/home/pi/bin/tv.sh rpias')
+
     def on_custom_shellrunnergadget_tvas(self, directive):
-        os.system('/home/pi/bin/tv.sh as')
+        os.system('/home/pi/bin/tv.sh tvas')
+
+    def on_custom_shellrunnergadget_tvvolup(self, directive):
+        os.system('/home/pi/bin/tv.sh volup')
+
+    def on_custom_shellrunnergadget_tvvoldnw(self, directive):
+        os.system('/home/pi/bin/tv.sh voldnw')
+
+    def on_custom_shellrunnergadget_tvmute(self, directive):
+        os.system('/home/pi/bin/tv.sh mute')
 
     def on_custom_shellrunnergadget_reboot(self, directive):
         os.system('reboot')
